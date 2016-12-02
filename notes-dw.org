@@ -1,0 +1,57 @@
+#+TITLE: C++ Primer Exercise Notes
+#+AUTHOR: Donald Willcox
+
+The C++ Primer, 5th Edition, by Lippman, Lajoie, and Moo is here
+denoted ``CPPP5''.
+
+* Tips
+
+** Bash - Show Return Value
+
+To see return values from the last run program or command, use `$?`:
+
+#+BEGIN_EXAMPLE
+$ ./exercise-1.1-dw.exe
+$ echo $?
+0
+#+END_EXAMPLE
+
+* Chapter 1
+
+** Exercise 1.1
+
+main() returns 0
+
+I get the return value 0
+
+Just as expected.
+
+** Exercise 1.2
+
+main() returns -1
+
+I get the return value 255
+
+Lupe suggested this is because of how signed numbers are represented
+on 8 bits, cf pg 34 of CPPP5. The program is returning -1 as a signed
+integer, in accordance with the declared return value of `main()` but
+bash seems to be displaying it as an unsigned integer instead.
+
+This is confirmed by the GNU specifications for [[https://www.gnu.org/software/libc/manual/html_node/Exit-Status.html#Exit-Status][Exit Status codes]] and
+[[https://www.gnu.org/software/libc/manual/html_node/Process-Completion-Status.html][Process Completion Status Macros]] which dictate that if the process has
+exited, then the exit status macro ``returns the low-order 8 bits of
+the exit status value from the child process'' which is interpreted as
+an unsigned integer (0-255).
+
+Furthermore, the mapping between the signed integer returned by the
+C++ program and the unsigned 8-bit exit status is determined by the
+two's complement binary representation of negative numbers used by
+most modern computers. In this representation, `x*` is the binary
+representation of the negative number with magnitude `x` and is
+defined by `x* = 2^N - x` on N bits. Equivalently, the binary
+representation of the negative number can be obtained from the binary
+representation of its magnitude by flipping its bits and adding one.
+
+So, a C++ integer exit status of -1 is represented on 16 bits by
+0xFFFF in two's complement, and the lowest 8 bits are 0xFF, which
+interpreted as an unsigned integer yields 2^8 - 1 = 255.
