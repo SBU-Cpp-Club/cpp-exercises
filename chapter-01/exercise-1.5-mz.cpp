@@ -1,14 +1,18 @@
 #include <iostream>
 
-int main() 
+int main()
 {
 
-  double x = 0.0, y = 0.0;
-
   std::cout << "Enter two numbers: " << std::endl;
+  int v1 = 0, v2 = 0;
+  std::cin >> v1 >> v2;
 
-  std::cin >> x >> y;
-
-  std::cout << "product: " << x*y << std::endl;
+  std::cout << "The sum of ";
+  std::cout << v1;
+  std::cout << " and ";
+  std::cout << v2;
+  std::cout << " is ";
+  std::cout << v1 + v2;
+  std::cout << std::endl;
 
 }
