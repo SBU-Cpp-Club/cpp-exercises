@@ -5,5 +5,5 @@ participant in C++ club can push their own solution (with their
 initials embedded in the filename, like exercise1-xy.cpp).
 
 We'll meet weekly and discuss the problems and converge on a clear
-solution will will be put into a separate working directory.
+solution which will be put into a separate working directory.
 
