@@ -12,7 +12,7 @@ int main() {
 
   int ilower;            // Variable to hold lower end of integer range
   int iupper;            // Variable to hold upper end of integer range
-  int number=10;         // Variable to track number
+  int number;            // Variable to track number
 
   std::cout << " Enter two integers i1 < i2:";
   std::cin >> ilower >> iupper ;
