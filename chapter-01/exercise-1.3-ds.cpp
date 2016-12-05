@@ -3,7 +3,7 @@
 //  Author:    D. Swesty
 //  Date:      12/5/2016
 //
-//  Notes:     This program print Hello, World on STDOUT
+//  Notes:     This program prints Hello, World on STDOUT
 //
 #include <iostream>
 
