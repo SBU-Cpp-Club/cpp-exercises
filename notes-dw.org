@@ -16,6 +16,7 @@ $ echo $?
 0
 #+END_EXAMPLE
 
+
 * Chapter 1
 
 ** Exercise 1.1
@@ -55,3 +56,54 @@ representation of its magnitude by flipping its bits and adding one.
 So, a C++ integer exit status of -1 is represented on 16 bits by
 0xFFFF in two's complement, and the lowest 8 bits are 0xFF, which
 interpreted as an unsigned integer yields 2^8 - 1 = 255.
+
+** Exercise 1.3
+   
+The Hello, World program. It works.
+
+** Exercise 1.4
+
+Print the product of two integers from command line.
+
+It works.
+
+** Exercise 1.5
+
+Use separate statement per operand.
+
+It works.
+
+** Exercise 1.6
+
+The program fragment is not legal because the first `cout` line
+terminates in `;` and there are no instances of `cout` on the
+following lines, thus the `<<` operators on those lines lack an
+`ostream`. Alternately, just get rid of the terminating `;` on the
+first two lines of the `cout`.
+
+Fixed.
+
+** Exercise 1.7
+
+Attempting improperly nested comments ...
+
+Got following compiler error.
+
+```
+g++ -Wall -pedantic -std=c++11 -o exercise-1.7-dw.ex exercise-1.7-dw.cpp
+exercise-1.7-dw.cpp: In function ‘int main()’:
+exercise-1.7-dw.cpp:3:34: error: ‘nest’ was not declared in this scope
+   /* Begin comment and try to */ nest the comments /* like so. */
+                                  ^
+GNUmakefile:10: recipe for target 'exercise-1.7-dw.ex' failed
+make: *** [exercise-1.7-dw.ex] Error 1
+```
+
+** Exercise 1.8
+
+Line 3 does not compile because the first quote is within a comment,
+leaving the second quote without a terminating quote character.
+
+All other lines compile because the compiler searches from the opening
+`/*` to the next consecutive closing `*/`.
+
