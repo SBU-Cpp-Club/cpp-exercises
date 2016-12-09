@@ -16,6 +16,15 @@ $ echo $?
 0
 #+END_EXAMPLE
 
+** Disassembly with objdump
+
+I prefer the following objdump options for disassembling an executable
+(e.g. `main.exe`):
+
+#+BEGIN_EXAMPLE
+$ objdump -d --no-show-raw-insn -M intel main.exe
+#+END_EXAMPLE
+
 
 * Chapter 1
 
@@ -106,4 +115,95 @@ leaving the second quote without a terminating quote character.
 
 All other lines compile because the compiler searches from the opening
 `/*` to the next consecutive closing `*/`.
+
+** Exercise 1.9
+
+Sum numbers 50 to 100 with a while.
+
+It worked, though I at first used single quotes to print a
+string. That yielded an error, since in C & C++ single quotes denote
+multi-character literals that get represented as an integer by the
+compiler. You have to use double quotes to denote character string
+literals.
+
+** Exercise 1.10
+
+Print numbers from 10 down to 0.
+
+Works.
+
+** Exercise 1.11
+
+Print each integer between two integers.
+
+To make this a little more general I am printing the range a ... b
+instead of the numbers in the range [a, b] since I make no assumption
+as to which of a or b is larger.
+
+** Exercise 1.12
+
+Sums the integers from -100 to +100, result is 0.
+
+** Exercise 1.13
+
+Rewrite Ex 1.9 (1.13a) and 1.10 (1.13b) using for loops.
+
+** Exercise 1.14
+
+Dissassembly shows Ex 1.9 vs 1.13a and 1.10 vs 1.13b compile to
+exactly the same machine instructions.
+
+You can change the order in which x and i are declared in Ex 1.9, for
+example, but the only instruction-level difference is to change which
+memory addresses the compiler uses for x and i.
+
+** Exercise 1.15
+
+Eh, I'll skip this one. Bla bla compiler errors.
+
+** Exercise 1.16
+
+Print sum of set of integers from stdin.
+
+This was cool. The while loop over `std::cin` stops at EOF, which on
+Linux is `Ctrl-D`.
+
+** Exercise 1.17
+
+If the input values are all equal, you just get a count equal to the
+number of input values. If they are all different, you get a count for
+each one and the counts are all 1.
+
+** Exercise 1.18
+
+Validating Ex 1.17 ... yep, it does what I said it would.
+
+** Exercise 1.19
+
+I already did that, see Ex 1.11. My 1.19 is just a copy.
+
+** Exercise 1.20
+
+ezpz
+
+** Exercise 1.21
+
+ezpz
+
+** Exercise 1.22
+
+ezpz
+
+** Exercise 1.23
+
+ezpz
+
+** Exercise 1.24
+
+Works as expected.
+
+** Exercise 1.25
+
+Works as expected.
+
 
