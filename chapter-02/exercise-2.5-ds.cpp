@@ -1,7 +1,7 @@
 //
-//  Purpose:   Implement solution to exercise 2.4
+//  Purpose:   Implement solution to exercise 2.5
 //  Author:    F. D. Swesty
-//  Date:      12/27/2016 
+//  Date:      1/3/2017 
 
 // a:   'a' is a char
 //      L'a' is a wide char
