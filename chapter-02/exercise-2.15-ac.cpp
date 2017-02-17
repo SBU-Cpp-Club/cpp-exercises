@@ -5,6 +5,13 @@
 //
 //     Question- The book says a reference is an alias. Is it an address?
 //
+//     Answer- As per discussion, it is an alias. Mike says that he only uses
+//            these in arguments to functions. So what is the point of an 
+//            alias? Not much, but you use these reference variables in
+//            aregument lists so that you can change the value in the function.
+//            By making a reference variable, you are passing by reference and 
+//            doing what Fortran does by default.
+//
 #include<iostream>
 
 int main()
