@@ -8,6 +8,7 @@ int main()
     int j = i;
 
    std::cout << "i = " << i << std::endl;
+   std::cout << "i = " << ::i << std::endl;
    std::cout << "j = " << j << std::endl;
 
    return 0;
