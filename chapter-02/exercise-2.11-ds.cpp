@@ -10,4 +10,7 @@
 
 // extern int iz;        // This is a declaration
 
+int main() {
 
+  return 0;
+}
