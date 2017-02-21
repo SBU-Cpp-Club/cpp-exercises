@@ -7,7 +7,7 @@ EXEC := $(SOURCES:.cpp=.ex)
 ALL: $(EXEC)
 
 %.ex: %.cpp
-	g++ -Wall -pedantic -std=c++11 -o $@ $<
+	g++ -Wall -Wzero-as-null-pointer-constant -pedantic -std=c++11 -o $@ $<
 
 
 clean:
