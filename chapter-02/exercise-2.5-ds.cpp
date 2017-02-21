@@ -2,7 +2,8 @@
 //  Purpose:   Implement solution to exercise 2.5
 //  Author:    F. D. Swesty
 //  Date:      1/3/2017 
-
+using namespace std;
+int main() {
 // a:   'a' is a char
 //      L'a' is a wide char
 //      "a" is a C-string
@@ -23,4 +24,6 @@
 //      10u is an unsigned int
 //      10. is a double
 //      10e-2 is a double
+  return 0;
+}
  
