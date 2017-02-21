@@ -3,19 +3,19 @@
 //  Author:    F. D. Swesty
 //  Date:      2/21/2017 
 //
-//  Note:  This code describes the difference between pointers and references
+//  Note:  This code squares the integer value 2
 //
 #include <iostream>
 using namespace std;
 int main() {
 
-  // A reference creates an alias for an existing object.  The referrence
-  // is "constant" in the sense that it can only point to a single object.
-  
+  int i=2;
 
-  // A pointer contains the address of an object.   The pointer can change
-  // at execution time.  
+  int *pi=&i;
 
+  *pi = *pi * *pi;
+
+  cout << *pi << endl;
 
   return 0;
 }
