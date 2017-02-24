@@ -1,0 +1,10 @@
+p is a pointer to int
+
+if (p)
+
+  This is true if p is initialized (e.g. not nullptr)
+
+
+if (*p)
+
+  This is true if the value that p points to is nonzero

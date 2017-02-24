@@ -1,0 +1,1 @@
+You cannot determine whether p points to a valid object with normal (raw) pointers.  
