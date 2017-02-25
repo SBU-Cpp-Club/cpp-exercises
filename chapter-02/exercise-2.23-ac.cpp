@@ -27,3 +27,7 @@ int main()
 
    return 0;
 }
+
+
+\\ answer is that you can't. There is no way for a generic pointer
+\\ to test if it points. Smart pointers, we'll see these later, can.

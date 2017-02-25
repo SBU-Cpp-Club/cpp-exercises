@@ -6,6 +6,8 @@ int main()
 
 // (a)
 //   int i = -1, &r = 0; // 2nd part illegal- initializer must be an object (example p. 51)
+                         // p. 57-58 "A pointer is an object in memory, so like any object
+                         // it has an address. Later p. 58 "A reference is not an object."
    int i = -1, &r = i; 
 
    std::cout << "i = " << i << std::endl;
@@ -15,7 +17,7 @@ int main()
 
 // (b)
    int ib = 42;
-   int *const pb = &ib;   // legal
+   int *const pb = &ib;   // legal constant pointer, top level const
 
    std::cout << "ib = " << ib << std::endl;
    std::cout << "*pb = " << *pb << std::endl;
