@@ -29,7 +29,7 @@ int main()
    std::cout << "&rc = " << &rc << std::endl;
 
 // (d)
-//   const int *const p3; // not legal as it is redundant?
+   const int *const p3 = p2; // as per book: right-most const is top-level, left-most is not
 
 
 // (e)
