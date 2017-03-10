@@ -21,25 +21,25 @@ int main()
 
 // (b)
  
-//   p1 = p3;  // p1 is not const, so can't
+//   p1 = p3;  // p1 is not const, so can't p3 is const pointer to an int. Cant have integer pointer point to const.
    std::cout << "p1 = " << p1 << std::endl;
    std::cout << "*p1 = " << *p1 << std::endl;
 
 // (c)
 
-//   p1 = &ic; // p1 is not const
+//   p1 = &ic; // p1 is not pointer to const
    std::cout << "p1 = " << p1 << std::endl;
    std::cout << "*p1 = " << *p1 << std::endl;
 
 // (d)
 
-//   p3 = &ic; //can't assign const
+//   p3 = &ic; //can't re-assign const pointer.
    std::cout << "p3 = " << p3 << std::endl;
    std::cout << "*p3 = " << *p3 << std::endl;
 
 // (e)
 
-//   p2 = p1; // can't assign const
+//   p2 = p1; // can't reassign assign const pointer.
    std::cout << "p2 = " << p2 << std::endl;
    std::cout << "*p2 = " << *p2 << std::endl;
 

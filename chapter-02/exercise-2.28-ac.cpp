@@ -15,6 +15,7 @@ int main()
 // (b)
 //   int *p1, *const p2;   // legal constant pointer, top level const
 //   int *p1, *const p2;   // legal constant pointer, top level const
+// NO! const pointer must be initialized
    int ib = 42;
    int *p1 = &ib;  
    int *const p2 = &ib ;  
@@ -30,11 +31,12 @@ int main()
 
 // (d)
    const int *const p3 = p2; // as per book: right-most const is top-level, left-most is not
+// illegal as it needs to be initialized.
 
 
 // (e)
    int ie = 42;
-   const int *pe = &ie; // legal constant pointer
+   const int *pe = &ie; // legal pointer to a constant, not const pointer.
 
    std::cout << "*pe = " << *pe << std::endl;
    std::cout << "pe = " << pe << std::endl;
