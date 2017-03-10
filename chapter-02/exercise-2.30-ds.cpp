@@ -18,6 +18,8 @@ int main() {
 
   int &r1 = v1;     // Legal as neither r1 or v1 has any const property
 
+  const int p2 = &v2 ; // v2 has top level cp., p2 has low level cp.
+
   const int *const p3 = &i ; // Legal as non-const can be converted to const
 
   const int &r2 = v2 ; // Legal as both r2 & v2 have low level const property
