@@ -1,5 +1,5 @@
 //
-//  Purpose:   Implement solution to exercise 2.12
+//  Purpose:   Implement solution to exercise 2.9
 //  Author:    F. D. Swesty
 //  Date:      1/6/2017 
 
@@ -7,16 +7,17 @@
 
 int main() {
 
-  //  int double = 3.14;    // Illegal name -- conflicts with keywords
+  //  std::cin >> int i;    // This statement is illegal as the definition
+  //                        // occurs in the middle of an expression
 
-  //  int catch-22;         // Illegal name -- no dashes allowed
+  // int i = {3.14};        // Illegal because of narrowing conversion inside
+  //                        // a list initialization
 
-  //  double Double = 3.14; // Legal
+  // double salary = wage = 99.9;  // This statement is illegal as wage is
+  //                               // not previously defined
 
-  // int _;                 // Legal
+  // int i=3.14;            // Legal
 
-  // int 1_or_2 = 1;        // Illegal name -- identifier cannot 
-                            // begin with a digit
 
   return 0;
 
