@@ -19,6 +19,8 @@ int main()
    std::cout << "p = " << p << std::endl;
    std::cout << "*p = " << *p << std::endl;
 
+// Note 3/25/2017 following meeting. See MZ solution and
+// https://stackoverflow.com/questions/24213159/how-to-initialize-a-pointer-using-an-object-with-0-value
 
    return 0;
 }
