@@ -1,7 +1,7 @@
 //
 //  Purpose:   Implement solution to exercise 2.36
 //  Author:    F. D. Swesty
-//  Date:      3/10/2017 
+//  Date:      3/28/2017 
 //
 //
 #include <iostream>
