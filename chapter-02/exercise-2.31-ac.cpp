@@ -24,7 +24,7 @@ int main()
    p2 = p1; // legal p2 is low-level const pointer- can point to a const
 //   p3 = p1; // not legal p3 is top-level const pointer
 //   p1 = p3; // not legal p1 is not const- can't point to a const
-   p2 = p3; // legal  p2 is low-level const
+   p2 = p3; // legal  p2 is low-level const p3 is const pointer....
 
 
    std::cout << "v1 = " << v1 << std::endl;
