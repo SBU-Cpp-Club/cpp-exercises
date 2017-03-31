@@ -7,7 +7,7 @@ int main()
    
    int a = 3, b = 4; 
    decltype(a) c = a;    // c is an int
-   decltype(a=b) d = a;  // assignment makes d a reference
+   decltype(a=b) d = a;  // assignment yields a reference- makes d a reference
 //   decltype(a=b) e;      // assignment makes d a reference illegal
    
    ++c;
