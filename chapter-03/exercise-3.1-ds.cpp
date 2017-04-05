@@ -1,0 +1,67 @@
+//
+//  Purpose:   Implement solution to exercise 3.1
+//  Author:    F. D. Swesty
+//  Date:      4/5/2017 
+//
+//
+#include <iostream>
+#include <string>
+
+using std::cout;   // Bring in cout from the standard namespace
+using std::endl;   // Bring in endl from the standard namespace
+using std::string; // Bring in string from the standard namespace
+using std::cin;    // Bring in cin from standard namespace
+
+
+struct Sales_data { // Define the Sales_data structure
+  string bookNumber;
+  int unitsSold=0;
+  double revenue=0.0; 
+};
+
+
+int main() {
+
+  Sales_data book, sale;   // Declare instances of Sales_data
+  double price;
+
+  book.bookNumber == "";                     // Init bookNumber to empty string
+  cout << " Enter book data:" ;
+
+  while( cin >> sale.bookNumber) {
+
+    if(sale.bookNumber == "0-0") { 
+      cout << "Book Number " << book.bookNumber << " totals:" << endl;
+      cout << "  units sold: " << book.unitsSold << endl;
+      cout << "  revenue:  " << book.revenue << endl;
+      return 0;   // Stop
+    }
+
+    cin >> sale.unitsSold;                   // Get no. units sold
+    cin >> price;                            // Get price
+
+    if(book.bookNumber == "" ) {             // This is the first sale 
+                               
+      book.bookNumber = sale.bookNumber;        // Set book number
+
+    } else if(book.bookNumber != sale.bookNumber) { // This is a new book
+
+                                                // Write out info for old book
+      cout << "Book Number " << book.bookNumber << " totals:" << endl;
+      cout << "  units sold: " << book.unitsSold << endl;
+      cout << "  revenue:  " << book.revenue << endl;
+
+      book.bookNumber = sale.bookNumber;        // Reset book number
+      book.unitsSold = 0;                       // Reset units sold
+      book.revenue = 0.0;                       // Reset revenue
+    }
+
+    book.unitsSold += sale.unitsSold;          // Add units sold to total
+    book.revenue += sale.unitsSold*price;      // Add revenue to total
+
+    cout << " Enter book data (book 0-0 ends sum):" ;
+  }
+
+
+  return 0;
+}
