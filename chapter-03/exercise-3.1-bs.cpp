@@ -3,10 +3,10 @@
 using std::cin;
 using std::cout;
 using std::endl;
-using std::string;
+
 
 struct Sales_data{
-    string bookNo;
+    std::string bookNo;
     int units_sold = 0;
     double price = 0.0;
     double revenue = 0.0;  
