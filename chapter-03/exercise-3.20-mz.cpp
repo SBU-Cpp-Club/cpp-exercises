@@ -20,12 +20,9 @@ int main() {
 
   // now sum the first and last, then the second and second-to-last, ...
   // need to be careful about an odd number of elements -- don't add to ourself
-  decltype(int_list.size()) k = int_list.size() - 1;
-  for (decltype(int_list.size()) i = 0; 
-       i < int_list.size()/2 && i != k; 
-       ++i) {
+  for (decltype(int_list.size()) i = 0; i < int_list.size()/2; ++i) {
+    auto k = int_list.size() - i - 1;
     std::cout << int_list[i] << " + " << int_list[k] << " = " << int_list[i] + int_list[k] << std::endl;
-    --k;
   }  
   return 0;
 
