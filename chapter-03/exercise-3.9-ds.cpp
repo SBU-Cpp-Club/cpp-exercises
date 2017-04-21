@@ -16,7 +16,7 @@ int main() {
 
   string s;   // Declare instance of string
 
-  cout << s << endl;  // This is valid and outputs an empty string
+  cout << s << endl;
 
   return 0;   // Stop
 }
