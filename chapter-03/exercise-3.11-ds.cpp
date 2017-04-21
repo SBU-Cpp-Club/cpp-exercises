@@ -1,5 +1,5 @@
 //
-//  Purpose:   Implement solution to exercise 3.10
+//  Purpose:   Implement solution to exercise 3.11
 //  Author:    F. D. Swesty
 //  Date:      4/21/2017 
 //
