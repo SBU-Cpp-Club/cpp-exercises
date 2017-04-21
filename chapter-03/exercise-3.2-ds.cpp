@@ -21,7 +21,7 @@ int main() {
 
     cout << line << endl;    // Output the line to STDOUT
 
-    if( line == "" ) break;
+    if( line.empty() ) break;
 
   }
 
