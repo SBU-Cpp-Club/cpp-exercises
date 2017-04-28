@@ -22,7 +22,7 @@ int main() {
 
                          // Output the vector to STDOUT
   cout << " Vector element values are: ";
-    for(unsigned j=0; j < iv.size() ; j++) {cout << iv[j] << " ";}
+  for(decltype(iv.size()) j=0; j < iv.size() ; j++) {cout << iv[j] << " ";}
   cout << endl;
 
   return 0;   // Stop
