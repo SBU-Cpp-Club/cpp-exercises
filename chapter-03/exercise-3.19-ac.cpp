@@ -15,7 +15,8 @@ int main(){
    }
 
 // second way
-   vector<int> v2(10,42);
+   vector<int> v2(10,42);   // As the text notes, using the constructor is efficient 
+                            // when the elements are all the same.
 
 //  third way 
    vector<int> v3(10);
