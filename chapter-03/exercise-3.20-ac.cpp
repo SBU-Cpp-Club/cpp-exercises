@@ -25,11 +25,21 @@ int main(){
    
    cout  << endl;
 
+   cout << "First the sum of each pair of adjacent elements" << endl;
+
    for (auto j : v1){
    if((j != 0)&&(j % 2 == 0)) cout << v1[j-1]+v1[j-2] << endl;
    }
     
-//to do- change to print sum of first and last, second and next to last, ....
+   cout << "The the sum of first and last, 2nd and 2nd from last,..." << endl;
+// is this a cheesy way of doing this?
+//
+   cout << "size of v1 = " << v1.size() << endl;
+   cout << "size of v1/2 = " << v1.size()/2 << endl;
+   for(decltype(v1.size()) j = 0; j <= (v1.size()/2 - 1); ++j)
+{
+   cout << "j = " << j << " sum = " << v1[j]+v1[v1.size()-(j+1)] << endl;
+   }
 
    return 0;
 }
