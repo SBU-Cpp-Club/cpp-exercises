@@ -11,9 +11,9 @@ int main(){
    vector<int> v1;  
 
 
-   for (int i = 0; i < 10; i++){
-     cout << "Enter an integer" << endl;
-     cin >> iread;
+   cout << "Enter an integer" << endl;
+   while (cin >> iread){
+     cout << "Enter another integer or ctrl-d to end" << endl;
      v1.push_back(iread);
    }
 
@@ -25,17 +25,23 @@ int main(){
    
    cout  << endl;
 
-   for (auto it = v1.begin(); it != v1.end(); ++it){
-     *it = 2**it;
-   }
-
-   cout << "After, Vector = ";
+   cout << "First the sum of each pair of adjacent elements" << endl;
 
    for (auto j : v1){
-     cout << j << " ";
+   if((j != 0)&&(j % 2 == 0)) cout << v1[j-1]+v1[j-2] << endl;
    }
-   
-   cout  << endl;
+    
+   cout << "The the sum of first and last, 2nd and 2nd from last,..." << endl;
+   cout << "size of v1 = " << v1.size() << endl;
+   cout << "size of v1/2 = " << v1.size()/2 << endl;
+
+   auto beg = v1.begin(), end = v1.end();
+   auto mid = v1.begin() + (end - beg)/2;
+
+   for(decltype(v1.size()) j = 0; j <= (v1.size()/2 - 1); ++j)
+{
+   cout << "j = " << j << " sum = " << v1[j]+v1[v1.size()-(j+1)] << endl;
+   }
 
    return 0;
 }
