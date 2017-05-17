@@ -34,9 +34,8 @@ int main(){
    return 0;
 }
 
-int txt_size()
-{
- return 512;
+int txt_size(){
+   return 512;
 }
 
 
