@@ -15,6 +15,7 @@ int main(){
 
    for (auto it = v1.begin(); it != v1.end(); ++it)
         cout << *it << " ";
+// could use ranged for above
 
    cout << endl;
 

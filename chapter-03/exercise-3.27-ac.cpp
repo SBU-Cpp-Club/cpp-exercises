@@ -11,12 +11,14 @@ int main(){
 
    unsigned buf_size = 1024;  
    int ia[buf_size];                 // should be illegal as buf_size not const but works
+                                     // gives warnring when compiled with makefile. 
 
    int ic[4*7-14];                   // legal as literals
 
    int ib[txt_size()];               // should be illegal because not constant but works
 
-   char st[12] = "fundamental";      // illegal no space for null.
+  // char st[11] = "fundamental";      // illegal no space for null.
+   char st[12] = "fundamental";     
 
 
    for (unsigned i = 0; i < buf_size; i++){

@@ -15,8 +15,11 @@ int main(){
    for (size_t ix = 0; ix < array_size; ++ix)
         ia[ix] = ix;
 
-   for (auto i : ia)
-        ia2[i] =  ia[i];
+//   for (auto i : ia)
+//        ia2[i] =  ia[i];   //NO! i is element, not counter.
+
+   for (size_t ix = 0; ix < array_size; ++ix)
+        ia2[ix] =  ia[ix];  
 
    for (auto i : ia2)
         cout << ia2[i] << " ";
