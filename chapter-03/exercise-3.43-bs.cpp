@@ -14,7 +14,7 @@ int main()
 
    // version one --- using range for
 
-   for (const auto &row : ia)
+   for (const int (&row)[4] : ia)
      for (size_t col : row)
        cout << col << endl;
  
@@ -26,9 +26,10 @@ int main()
    }
 
   //version three --- for loop with pointers
-  
-    for (auto p = std::begin(ia); p != std::end(ia); ++p){
-      for(auto q = std::begin(*p); q != std::end(*p); ++q){
+ 
+   // int (*p)[4] ---- pointer to an array of four ints
+    for (int (*p) [colCnt] = ia; p < ia + rowCnt; ++p){
+      for(int *q = *p; q < *p + colCnt; ++q){
         cout << *q << endl;
       }
     }

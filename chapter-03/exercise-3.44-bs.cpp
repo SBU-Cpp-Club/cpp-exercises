@@ -8,7 +8,6 @@ using std::endl;
 int main()
 {
 
-   using int_array = int[4];
    typedef int int_array[4];
 
    constexpr size_t rowCnt = 3, colCnt = 4;
@@ -29,8 +28,8 @@ int main()
 
   //version three --- for loop with pointers
   
-    for (int_array *p = ia; p != ia + 3; ++p){
-      for(int *q = *p; q != *p + 4 ; ++q){
+    for (int_array *p = ia; p < ia + rowCnt; ++p){
+      for(int *q = *p; q < *p + colCnt ; ++q){
         cout << *q << endl;
       }
     }
