@@ -40,11 +40,11 @@ int main()
    int (*p)[4] = ia;
 
    for (size_t i = 0; i != rowCnt; ++i) {
-       cout << "i = " << i << endl;
-       p = & ia[i];
-          cout << *p << endl; 
+    //   cout << "i = " << i << endl;
+       p++;
        for (size_t j = 0; j != colCnt; ++j) 
-          cout << *p[j] << endl; 
+         cout << (*p)[j] << endl; 
+         // cout << *p << endl; 
     }
 
    return 0;
