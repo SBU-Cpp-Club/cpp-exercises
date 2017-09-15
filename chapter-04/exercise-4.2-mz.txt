@@ -1,0 +1,11 @@
+a)    * vec.begin()
+
+   object member "." has higher precedence than dereference
+
+   *(vec.begin())
+
+b)   * vec.begin() + 1
+
+   dereferences has higher precedence than addition
+
+   (*(vec.begin())) + 1
