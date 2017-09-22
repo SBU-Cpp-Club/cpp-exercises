@@ -19,10 +19,9 @@ int main()
  
    cout << endl;
    cout << "with range for" << endl;
- 
-   for(auto &row : ia)
-      for(auto &col : row)
-         cout << col << endl;
+   for (const int (&row)[4] : ia)
+     for (size_t col : row)
+       cout << col << endl;
 
    cout << endl;
    cout << "with for and subscripts" << endl;
@@ -40,11 +39,9 @@ int main()
    int (*p)[4] = ia;
 
    for (size_t i = 0; i != rowCnt; ++i) {
-    //   cout << "i = " << i << endl;
        p++;
        for (size_t j = 0; j != colCnt; ++j) 
          cout << (*p)[j] << endl; 
-         // cout << *p << endl; 
     }
 
    return 0;
