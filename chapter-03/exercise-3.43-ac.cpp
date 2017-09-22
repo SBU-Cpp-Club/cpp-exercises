@@ -39,9 +39,9 @@ int main()
    int (*p)[4] = ia;
 
    for (size_t i = 0; i != rowCnt; ++i) {
-       p++;
        for (size_t j = 0; j != colCnt; ++j) 
          cout << (*p)[j] << endl; 
+         p++;
     }
 
    return 0;
