@@ -23,6 +23,10 @@ cout << "short is1, is2 = " << is1 << "  " << is2 << endl;
 // now a hacky example from  https://stackoverflow.com/questions/8782852/c-buffer-overflow
 // try it with 0123456789abcdef1. Logic is that 0123456789abcdef is 16 bytes, so the 1
 // causes an overflow.
+//
+// Note that conversation with MZ brought to attention the fact that
+// this example is a buffer overflow whereas the above integer example
+// is an overflow.
 
   bool authenticated = false;
 
