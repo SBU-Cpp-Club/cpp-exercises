@@ -37,6 +37,8 @@ int main(){
 
    cout  << endl;
 
+   // note in discussion 11/3/17- need a vector of pointers to dereference.
+
    // now exercise 4.2
    //
    // a) according to the table, member selector "." has a higher 
