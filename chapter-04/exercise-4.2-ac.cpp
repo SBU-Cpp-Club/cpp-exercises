@@ -37,8 +37,12 @@ int main(){
 
    cout  << endl;
 
-   // note in discussion 11/3/17- need a vector of pointers to dereference.
+// note in discussion 11/3/17- need a vector of pointers to dereference.
+//   vector<int*> vp1;
 
+   for (int i = 1; i < 11; i++){
+     v1.push_back(i);
+   }
    // now exercise 4.2
    //
    // a) according to the table, member selector "." has a higher 
